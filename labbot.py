@@ -1,10 +1,11 @@
 import discord
 import asyncio
 from discord.ext import commands
+import os
 
 app = discord.Client()
 
-token = "NzExODE3OTI3MTAzNDc5ODk4.XsIiJg.DJ67yryBjZ27MWY5F9dUO3FwDRE"
+token = os.environ["BOT_TOKEN"]
 
 commandapp = commands.Bot(command_prefix='/')
 
