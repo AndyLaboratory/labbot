@@ -15,7 +15,8 @@ async def on_ready():
     print(app.user.name)
     print(app.user.id)
     print("==========")
-    messages = [f'{len(app.guilds)}개의 서버에 참여중', '도움말 : 랩 도움말', f'{len(app.users)}명의 유저가 사용함', '봇의 접두사는 랩 입니다', f'{len(app.guilds)}개의 서버와 {len(app.users)}명의 유저와 함께합니다!']
+    messages = ['호스팅에 심각한 오류가 발견되어서 봇이 온라인이여도 명령어는 이용하실 수 없습니다', '명령어 이용 불가', '점검 중']
+    #messages = [f'{len(app.guilds)}개의 서버에 참여중', '도움말 : 랩 도움말', f'{len(app.users)}명의 유저가 사용함', '봇의 접두사는 랩 입니다', f'{len(app.guilds)}개의 서버와 {len(app.users)}명의 유저와 함께합니다!']
     while True:
         await app.change_presence(status=discord.Status.online,activity=discord.Game(name=messages[0]))
         messages.append(messages.pop(0))
