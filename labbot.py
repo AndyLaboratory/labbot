@@ -3,8 +3,11 @@ import asyncio
 import os
 
 app = discord.Client()
+onoff = os.environ["ON_OR_OFF"]
 
 token = os.environ["BOT_TOKEN"]
+
+
 
 @app.event
 async def on_ready():
@@ -151,5 +154,6 @@ async def 유저정보(ctx, user_name: discord.Member):
     embed.add_field(name="역활({}개)".format(len(user_name.roles) - 1), value=" ".join([role.mention for role in roles]), inline=True)
     await ctx.send(embed=embed)
 '''
-app.run(token)
+if onoff is "ON":
+    app.run(token)
 
