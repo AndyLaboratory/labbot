@@ -3,7 +3,8 @@ import asyncio
 import os
 
 app = discord.Client()
-onoff = os.environ["ON_OR_OFF"]
+
+
 
 token = os.environ["BOT_TOKEN"]
 
@@ -90,7 +91,8 @@ async def on_message(message):
             scpembed=discord.Embed(color=0x00f1ff, title='연구허가서 안내', description='연구가 허가 되었습니다.')
             scpembed.add_field(name='연구 허가됨', value='재단 설립자가 실험을 허가 하였습니다.', inline=False)
             scpembed.set_footer(text='재단설립자', icon_url=message.author.avatar_url)
-            await message.channel.send(embed=scpembed)'''
+            await message.channel.send(embed=scpembed)
+"""
     if(message.content.split(" ")[0] == "랩"): 
 #SCP 구문들
         if(message.content.split(" ")[1] == "SCP"):
@@ -153,7 +155,6 @@ async def 유저정보(ctx, user_name: discord.Member):
     embed = discord.Embed(color=0x7CC8FF)
     embed.add_field(name="역활({}개)".format(len(user_name.roles) - 1), value=" ".join([role.mention for role in roles]), inline=True)
     await ctx.send(embed=embed)
-'''
-if onoff is "ON":
-    app.run(token)
+"""
+app.run(token)
 
