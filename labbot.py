@@ -76,7 +76,7 @@ async def on_message(message):
             scpembed.add_field(name='실험 시작됨', value='재단 설립자가 실험을 시작하였습니다.', inline=False)
             scpembed.set_footer(text='재단설립자', icon_url=message.author.avatar_url)
             await message.channel.send(embed=scpembed)
-    '''if message.content == "랩 SCP 연구허가":
+    if message.content == "랩 SCP 연구허가":
         print('check')
         print(f'{msg.id}')
         print(message.author.id)
@@ -97,7 +97,7 @@ async def on_message(message):
                     scpembed=discord.Embed(color=0x00f1ff, title='연구허가서 안내', description=f'{user.mention}님의 연구 허가됨')
                     scpembed.add_field(name='연구 허가됨', value='재단 설립자가 실험을 허가 하였습니다.', inline=False)
                     scpembed.set_footer(text='재단설립자', icon_url=message.author.avatar_url)
-                    await message.channel.send(embed=scpembed)
+                    await message.channel.send(embed=scpembed)'''
     
 '''@app.event
 async def on_message(message):
