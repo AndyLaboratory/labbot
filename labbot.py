@@ -97,9 +97,9 @@ async def on_message(message):
                     scpembed=discord.Embed(color=0x00f1ff, title='연구허가서 안내', description=f'{user.mention}님의 연구 허가됨')
                     scpembed.add_field(name='연구 허가됨', value='재단 설립자가 실험을 허가 하였습니다.', inline=False)
                     scpembed.set_footer(text='재단설립자', icon_url=message.author.avatar_url)
-                    await message.channel.send(embed=scpembed)'''
+                    await message.channel.send(embed=scpembed)
     
-'''@app.event
+@app.event
 async def on_message(message):
     msg : message.content
                     
@@ -119,10 +119,10 @@ async def on_message(message):
         else:
             await message.channel.send(embed=discord.Embed(title="권한 부족", description = message.author.mention + "님은 유저를 킥할 수 있는 권한이 없습니다.", color = 0xff0000))
             return
-'''
+
 
 #TESTING
-"""
+
 @commandapp.command(name="유저정보", pass_context=True)
 async def 유저정보(ctx, user_name: discord.Member):
     print(user_name)
@@ -150,6 +150,6 @@ async def 유저정보(ctx, user_name: discord.Member):
     embed = discord.Embed(color=0x7CC8FF)
     embed.add_field(name="역활({}개)".format(len(user_name.roles) - 1), value=" ".join([role.mention for role in roles]), inline=True)
     await ctx.send(embed=embed)
-"""
+'''
 app.run(token)
 
