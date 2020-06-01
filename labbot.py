@@ -1,13 +1,10 @@
 import discord
 import asyncio
-from discord.ext import commands
 import os
 
 app = discord.Client()
 
 token = os.environ["BOT_TOKEN"]
-
-commandapp = commands.Bot(command_prefix='/')
 
 @app.event
 async def on_ready():
@@ -91,7 +88,7 @@ async def on_message(message):
             scpembed.add_field(name='연구 허가됨', value='재단 설립자가 실험을 허가 하였습니다.', inline=False)
             scpembed.set_footer(text='재단설립자', icon_url=message.author.avatar_url)
             await message.channel.send(embed=scpembed)
-@app.event
+'''@app.event
 async def on_message(message):
     msg : message.content
     if(message.content.split(" ")[0] == "랩"):
@@ -105,7 +102,7 @@ async def on_message(message):
                     scpembed.set_footer(text='재단설립자', icon_url=message.author.avatar_url)
                     await message.channel.send(embed=scpembed)
                     
-'''
+
         if(message.author.guild_permissions.kick_members):
             try:
                 user = message.guild.get_member(int(message.content.split(' ')[1][3:21]))
